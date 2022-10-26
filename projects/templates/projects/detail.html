@@ -1,0 +1,45 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <main>
+        <div>
+            <h1>{{pet_project.name}}</h1>
+            <p>{{pet_project.description}}</p>
+            <h2>Tasks</h2>
+            {% if pet_project.tasks.all %}
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Assignee</th>
+                            <th>Start date</th>
+                            <th>Due date</th>
+                            <th>Is completed</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for task in pet_project.tasks.all %}
+                            <tr>
+                                <td>{{task.name}}</td>
+                                <td>{{task.assignee}}</td>
+                                <td>{{task.start_date}}</td>
+                                <td>{{task.due_date}}</td>
+                                <td>{{task.is_completed|yesno:"yes,no"}}</td>
+                            </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            {% else %}
+                <p>This project has no tasks</p>
+            {% endif %}
+        </div>
+    </main>
+</body>
+</html>
