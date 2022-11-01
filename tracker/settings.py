@@ -36,6 +36,7 @@ INSTALLED_APPS = [
     "accounts.apps.AccountsConfig",
     "projects.apps.ProjectsConfig",
     "tasks.apps.TasksConfig",
+    "matchups.apps.MatchupsConfig",
     "django.contrib.admin",
     "django.contrib.auth",
     "django.contrib.contenttypes",

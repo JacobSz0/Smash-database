@@ -1,0 +1,33 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" href="{% static "css/matchups.css" %}">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <header>
+        <div>
+            <span class="headboard">All Fighters</span>
+        </div>
+    </header>
+    <main>
+        <h1 class="text">All Characters</h1>
+        <div class="griddy">
+            <div class="card">
+                {% for char in char_list %}
+                <img class="picture" src="{{ char.picture }}" alt="Taco">
+                    <span class="text">{{ char.name }}</span>
+                    <span class="text">{{ char.number }}</span>
+            {% endfor %}
+            </div>
+        </div>
+    </main>
+</body>
+
+</html>

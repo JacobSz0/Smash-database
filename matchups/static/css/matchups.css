@@ -1,0 +1,29 @@
+main{
+    background-color: rgb(0, 0, 0);
+}
+
+.headboard{
+    background-color: rgb(224, 224, 224);
+    padding: 10px;
+}
+
+.picture {
+    width: 192px;
+    height: 108px;
+    padding: 0px;
+}
+
+.griddy {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    background-color: rgb(32, 32, 68);
+    padding: 0px;
+}
+
+.text{
+    color:white
+}
+
+.card{
+    padding: 10px;
+}
